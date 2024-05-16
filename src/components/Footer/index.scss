@@ -1,0 +1,29 @@
+footer{
+    background-color: #181818;
+    padding: 1rem 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: fit-content;
+    h3{
+        font-size: 1rem;
+        font-family: sans-serif;
+    }
+    ul{
+        display: flex;
+        list-style: none;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+
+        li{
+            a{
+            font-size: 1.5rem; 
+            }
+            &:hover svg{
+                color: #44CFCB;
+            }
+        }
+    }
+}

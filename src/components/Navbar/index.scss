@@ -1,25 +1,33 @@
 .nav-bar{
-    margin: 0;
+    position: fixed;
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: #181818;
     width: 100%;
-    height: fit-content;
+    height: auto;
+    padding: 0.5rem 2rem;
 
     .logo{
-        margin-left: 2rem;
         display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 2rem;
         img{
             padding: 1rem;
-            margin-top: 1rem;
-            width: 50px;
+            width: 4.5rem;
+            height: auto;
         }
     }
     nav{
-        font-size: 1.75rem;
+        font-size: 1.5rem;
         padding: 1rem 4rem;
         display: flex;
         gap: 2rem;
+        a.active{
+            svg{
+                color: #44CFCB;
+            }
+        }
     }
 }

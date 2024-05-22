@@ -1,13 +1,54 @@
-html {
-    font-size: 62.5%;
-  }
-  
-  body {
-    margin: 0;
-    font: 300 11px/1.4 sans-serif;
-    color: #444;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    background: #122C34;
-    display: block;
-  }
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  // border:  0.5px solid white;
+}
+html{
+  height: 100%;
+}
+body {
+  height: 100%;
+  font: 300 11px/1.4 sans-serif;
+  color: #444;
+  background: #122C34;  
+}
+$primary-color: #44cfcb;
+
+@import 'animate.css';
+@import 'loaders.css/src/animations/cube-transition.scss';
+
+@font-face {
+  font-family: 'Cascadia Code';
+  src: url('./assets/fonts/CascadiaCode.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Cascadia Code Italic';
+  src: url('./assets/fonts/CascadiaCodeItalic.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+input,
+textarea {
+  font-family: 'Cascadia Code', sans-serif;
+}
+
+.loader-hidden {
+  display: none;
+}
+.loader-active {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 100px;
+  height: 100px;
+  display: block;
+  animation: fadeOut 1s 1s forwards;
+}

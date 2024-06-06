@@ -4,9 +4,11 @@ import Typewriter from "typewriter-effect"
 import Illustration from '../../assets/images/illustration.svg'
 import introImg from '../../assets/images/logo.png'
 import Loader from 'react-loaders';
+import ParticleComponent from '../particles'
 const Home = ()=>{
     return(
         <>
+        {/* <ParticleComponent id='particles'/> */}
         <main className='home-page'>
             <section className='greeting'>
                 <div>
@@ -17,7 +19,7 @@ const Home = ()=>{
                             typewriter
                                 .pauseFor(2000)
                                 .changeDelay(50)
-                                .typeString("Hi, <br/> I'm Sammy Yang<br/> A Web Developer")
+                                .typeString("Hi 👋, <br/> I'm Sammy Yang<br/> A Web Developer")
                                 .start()
                             }}
                         />

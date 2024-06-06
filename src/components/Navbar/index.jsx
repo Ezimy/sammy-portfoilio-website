@@ -1,7 +1,7 @@
 import { Link, NavLink } from 'react-router-dom';
 import './index.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope, faHome, faUser } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faHome, faUser, faFile } from '@fortawesome/free-solid-svg-icons';
 import Initials from '../../assets/images/initials.png'
 function Navbar() {
     return(
@@ -18,6 +18,9 @@ function Navbar() {
                 </NavLink>
                 <NavLink exact="true" activeclassname="active" className="link contact" to="/Contact">
                     <FontAwesomeIcon icon={faEnvelope} color='#224870'/>
+                </NavLink>
+                <NavLink exact="true" activeclassname="active" className="link resume" to="/Resume">
+                    <FontAwesomeIcon icon={faFile} color='#224870'/>
                 </NavLink>
             </nav>
         </div>

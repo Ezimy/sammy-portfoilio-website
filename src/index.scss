@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  // border:  0.5px solid white;
 }
 html{
   height: 100%;
@@ -14,7 +13,6 @@ body {
   background: #122C34;  
 }
 $primary-color: #44cfcb;
-
 @import 'animate.css';
 @import 'loaders.css/src/animations/cube-transition.scss';
 

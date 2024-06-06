@@ -1,11 +1,12 @@
 .home-page{
+  // z-index: 1;
   animation: fadeIn 1s 2s backwards;
   .greeting{
     display: flex;
     gap: 10rem;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-    margin-bottom: 4rem;
+
     h2{
       margin-top: 20px;
     }
@@ -18,14 +19,14 @@
       display: block;
       color: #44cfcb;
       width: fit-content;
-      font-size: 13px;
+      font-size: 1rem;
       font-weight: 400;
-      letter-spacing: 4px;
+      letter-spacing: 0.25rem;
       text-decoration: none;
       font-family: sans-serif;
       float: none;
-      margin-top: 25px;
-      padding: 10px 18px;
+      margin-top: 1rem;
+      padding: 0.75rem 1.25rem;
       border: 1px solid #44cfcb;
       white-space: nowrap;
       &:hover{
@@ -35,9 +36,10 @@
     }
   }
   .intro{
+    // padding: 2rem 0;
     animation: fadeIn 1s 1s backwards;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     gap: 5rem;
     .intro-text{
       width: 50%;

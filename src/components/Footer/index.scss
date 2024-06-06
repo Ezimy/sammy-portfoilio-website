@@ -1,13 +1,14 @@
 footer{
+    z-index: 1;
     background-color: #181818;
     padding: 1rem 5rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
+    width: 100vw;
     height: fit-content;
     h3{
-        font-size: 1rem;
+        font-size: 0.75rem;
         font-family: sans-serif;
     }
     ul{

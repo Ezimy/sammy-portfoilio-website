@@ -1,16 +1,18 @@
 .contact-page{
+    z-index: 1;
     animation: fadeIn 1s 2s backwards;
     section{
-        border: 1px solid white;
         .contact-container{
             height: 100vh;
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            justify-content: space-evenly;
             .contact-left{
+                background-color: #122c34;
                 width: 50vw;
                 font-family: sans-serif;
-                border: 1px solid white;
+                border-radius: 1rem;
+                border: 1px solid #44cfcb;
                 padding: 2rem;
                 display: flex;
                 flex-direction: column;
@@ -19,6 +21,7 @@
                 hr{
                     width: 100%;
                     opacity: 0.5;
+                    color: black;
                 }
                 input{
                     color: #44cfcb;
@@ -56,7 +59,12 @@
                     background-color: #122c34;
                     border: 1px solid #44cfcb;
                 }
+                .flat-button:hover{
+                    background-color: #44cfcb;
+                    color: #122c34;
+                }
             }
+
         }
     }
 }

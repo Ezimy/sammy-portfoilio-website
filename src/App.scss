@@ -8,6 +8,7 @@
     min-height: 100vh;
 }
 main{
+    z-index: 1;
     height: 100%;
     width: 100%;
     display: flex;
@@ -17,21 +18,25 @@ main{
     h1{
         font-size: 3.5rem;
         color: #44cfcb;
-        font-family: 'Cascadia Code';
+        font-family: "Rubik";
         font-weight: 400;
     }
     h2{
         display: block;
-        font-weight: 400;
+        font-weight: 300;
         font-size: 1.5rem;
-        font-family: 'sans-serif';
+        font-family: "Rubik";
         letter-spacing: 2px;
         color: #2a4494;
     }
     p{
         font-size: 1.25rem;
+        font-weight: 300;
+        font-family: "Rubik";
+        color: #4ea5d9;
+    }
+    textarea{
         font-family: sans-serif;
-        color: whitesmoke;
     }
     section{
         width: 100vw;

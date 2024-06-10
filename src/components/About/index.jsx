@@ -11,9 +11,11 @@ import {
   } from '@fortawesome/free-brands-svg-icons'
 import { faC } from "@fortawesome/free-solid-svg-icons";
 import './index.scss'
+import ParticleComponent from '../particles'
 const About =()=>{
     return(
         <>
+            <ParticleComponent id='particles'/>
             <main className="about-page">
                 <section className="about-hero">
                     <div className="about-text">
@@ -32,13 +34,6 @@ const About =()=>{
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores error molestiae temporibus voluptatibus. Numquam dolorum ipsa reiciendis explicabo quos praesentium, tempore officia, itaque reprehenderit error in rerum voluptates cupiditate soluta!
                         </p>
-                        <br/>
-                            <ul>
-                            Besides Web Development, here are some other things I enjoy😊
-                                <li>Video Games</li>
-                                <li>Dogs</li>
-                                <li>Outdoors</li>
-                            </ul>
                     </div>
                     <img src={aboutIllustration}/>
                 </section>

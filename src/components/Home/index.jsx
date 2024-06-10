@@ -2,13 +2,13 @@ import { Link } from 'react-router-dom';
 import './index.scss'
 import Typewriter from "typewriter-effect"
 import Illustration from '../../assets/images/illustration.svg'
-import introImg from '../../assets/images/logo.png'
+import introImg from '../../assets/images/profile-image.jpg'
 import Loader from 'react-loaders';
 import ParticleComponent from '../particles'
 const Home = ()=>{
     return(
         <>
-        {/* <ParticleComponent id='particles'/> */}
+        <ParticleComponent id='particles'/>
         <main className='home-page'>
             <section className='greeting'>
                 <div>
@@ -36,16 +36,14 @@ const Home = ()=>{
             <section className='intro'>
                 <div className='intro-text'>
                     <h1>Introduction</h1>
-                    <h2>
-                        I enjoy programming and am interested in web development, particularly front-end development
-                        Am fluent in JavaScript, and Java
-
-                    </h2>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi molestias fugiat quam, repudiandae eligendi aspernatur non repellat nostrum minus doloribus magni velit at laboriosam dolorem! Autem soluta neque veniam adipisci.
+                    </p>
                 </div>
                 <img src={introImg}/>
             </section>
         </main>
-        <Loader type='cube-transition'/>
+        {/* <Loader type='cube-transition'/> */}
         </>
     )
 }

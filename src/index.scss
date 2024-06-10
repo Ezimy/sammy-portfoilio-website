@@ -8,33 +8,13 @@ html{
 }
 body {
   height: 100%;
-  font: 300 11px/1.4 sans-serif;
   color: #444;
   background: #122C34;  
 }
+//Loader
 $primary-color: #44cfcb;
 @import 'animate.css';
 @import 'loaders.css/src/animations/cube-transition.scss';
-
-@font-face {
-  font-family: 'Cascadia Code';
-  src: url('./assets/fonts/CascadiaCode.ttf') format('ttf');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Cascadia Code Italic';
-  src: url('./assets/fonts/CascadiaCodeItalic.ttf') format('ttf');
-  font-weight: normal;
-  font-style: normal;
-}
-
-input,
-textarea {
-  font-family: 'Cascadia Code', sans-serif;
-}
-
 .loader-hidden {
   display: none;
 }
@@ -48,5 +28,8 @@ textarea {
   width: 100px;
   height: 100px;
   display: block;
+  animation: fadeOut 1s 1s forwards;
+}
+#particles{
   animation: fadeOut 1s 1s forwards;
 }

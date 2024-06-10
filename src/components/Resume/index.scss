@@ -1,3 +1,38 @@
 .resume-page{
     animation: fadeIn 1s 2s backwards;
+    z-index: 1;
+    .resume-section{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        button{
+            cursor: pointer;
+            color: #44CFCB;
+            background-color: #122C34;
+            padding: 0.75rem 1rem;
+            border: 1px solid #44CFCB;
+        }
+        button:disabled{
+            background-color: #224870;
+            color: #4ea5d9;
+        }
+        button:hover{
+            background-color: #44CFCB;
+            color: #122C34;
+        }
+        .download-btn{
+            margin-bottom: 1rem;
+            a{
+                text-decoration: none;
+                color: #44CFCB;
+            }
+            a:hover{
+                color: #122C34;
+            }
+        }
+        .page-controls{
+            margin-top: 1rem;
+        }
+    }
 }

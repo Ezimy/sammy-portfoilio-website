@@ -32,13 +32,13 @@ const ParticlesComponent = () => {
       autoPlay: true,
       background: {
         color: {
-          value: "#000"
+          value: "#122c34"
         },
         image: "",
         position: "",
         repeat: "",
         size: "",
-        opacity: 1
+        opacity: 0.25
       },
       backgroundMask: {
         composite: "destination-out",
@@ -65,17 +65,17 @@ const ParticlesComponent = () => {
         events: {
           onClick: {
             enable: false,
-            mode: []
+            mode: {}
           },
           onDiv: {
-            selectors: [],
+            selectors: {},
             enable: false,
-            mode: [],
+            mode: {},
             type: "circle"
           },
           onHover: {
             enable: false,
-            mode: [],
+            mode: {},
             parallax: {
               enable: false,
               force: 2,
@@ -107,13 +107,7 @@ const ParticlesComponent = () => {
           bubble: {
             distance: 200,
             duration: 0.4,
-            mix: false,
-            divs: {
-              distance: 200,
-              duration: 0.4,
-              mix: false,
-              selectors: []
-            }
+            mix: false
           },
           connect: {
             distance: 80,
@@ -144,16 +138,7 @@ const ParticlesComponent = () => {
             factor: 100,
             speed: 1,
             maxSpeed: 50,
-            easing: "ease-out-quad",
-            divs: {
-              distance: 200,
-              duration: 0.4,
-              factor: 100,
-              speed: 1,
-              maxSpeed: 50,
-              easing: "ease-out-quad",
-              selectors: []
-            }
+            easing: "ease-out-quad"
           },
           slow: {
             factor: 3,
@@ -211,7 +196,7 @@ const ParticlesComponent = () => {
           }
         },
         color: {
-          value: "#fff",
+          value: "#4ea5d9",
           animation: {
             h: {
               count: 0,
@@ -246,9 +231,9 @@ const ParticlesComponent = () => {
           close: true,
           fill: true,
           options: {},
-          type: []
+          type: {}
         },
-        groups: {},
+        groups: [],
         move: {
           angle: {
             offset: 0,
@@ -270,9 +255,9 @@ const ParticlesComponent = () => {
           },
           decay: 0,
           distance: {},
-          direction: "none",
+          direction: "bottom",
           drift: 0,
-          enable: false,
+          enable: true,
           gravity: {
             acceleration: 9.81,
             enable: false,
@@ -301,7 +286,7 @@ const ParticlesComponent = () => {
             acceleration: 0,
             enable: false
           },
-          straight: false,
+          straight: true,
           trail: {
             enable: false,
             length: 10,
@@ -320,17 +305,14 @@ const ParticlesComponent = () => {
             mode: "delete",
             value: 0
           },
-          value: 200
+          value: 400
         },
         opacity: {
-          value: {
-            min: 0.1,
-            max: 1
-          },
+          value: 0.25,
           animation: {
             count: 0,
-            enable: true,
-            speed: 0.25,
+            enable: false,
+            speed: 2,
             decay: 0,
             delay: 0,
             sync: false,
@@ -358,7 +340,7 @@ const ParticlesComponent = () => {
           type: "circle"
         },
         size: {
-          value: 1,
+          value: 10,
           animation: {
             count: 0,
             enable: false,
@@ -375,10 +357,13 @@ const ParticlesComponent = () => {
           width: 0
         },
         zIndex: {
-          value: 0,
-          opacityRate: 1,
-          sizeRate: 1,
-          velocityRate: 1
+          value: {
+            min: 0,
+            max: 100
+          },
+          opacityRate: 10,
+          sizeRate: 10,
+          velocityRate: 10
         },
         destroy: {
           bounds: {},
@@ -435,10 +420,10 @@ const ParticlesComponent = () => {
           }
         },
         wobble: {
-          distance: 5,
-          enable: false,
+          distance: 10,
+          enable: true,
           speed: {
-            angle: 50,
+            angle: 10,
             move: 10
           }
         },
@@ -520,7 +505,7 @@ const ParticlesComponent = () => {
       style: {},
       themes: [],
       zLayers: 100,
-      emitters: [],
+      name: "Snow",
       motion: {
         disable: false,
         reduce: {

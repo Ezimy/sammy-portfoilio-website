@@ -3,6 +3,7 @@ import Typewriter from "typewriter-effect"
 import { useRef } from 'react'
 import emailjs from '@emailjs/browser'
 import aboutIllustration from "../../assets/images/about.svg"
+import ParticleComponent from '../particles'
 import './index.scss'
 const Contact = () =>{
     const form = useRef()
@@ -20,6 +21,7 @@ const Contact = () =>{
       }
     return(
         <>
+            <ParticleComponent/>
             <main className="contact-page">
                 <section className="contact-section">
                     <div className="contact-container">

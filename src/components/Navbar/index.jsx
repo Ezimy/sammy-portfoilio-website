@@ -11,16 +11,20 @@ function Navbar() {
             </Link>
             <nav>
                 <NavLink exact="true" activeclassname="active" className="link home" to="/">
-                    <FontAwesomeIcon icon={faHome} color='#224870'/>
+                    <FontAwesomeIcon icon={faHome} color='#224870' className='fa-icon'/>
+                    <span className="hover-text">Home</span>
                 </NavLink>
                 <NavLink exact="true" activeclassname="active" className="link about" to="/About">
-                    <FontAwesomeIcon icon={faUser} color='#224870'/>
+                    <FontAwesomeIcon icon={faUser} color='#224870'className='fa-icon'/>
+                    <span className="hover-text">About</span>
                 </NavLink>
                 <NavLink exact="true" activeclassname="active" className="link contact" to="/Contact">
-                    <FontAwesomeIcon icon={faEnvelope} color='#224870'/>
+                    <FontAwesomeIcon icon={faEnvelope} color='#224870'className='fa-icon'/>
+                    <span className="hover-text">Contact</span>
                 </NavLink>
                 <NavLink exact="true" activeclassname="active" className="link resume" to="/Resume">
-                    <FontAwesomeIcon icon={faFile} color='#224870'/>
+                    <FontAwesomeIcon icon={faFile} color='#224870'className='fa-icon'/>
+                    <span className="hover-text">Resume</span>
                 </NavLink>
             </nav>
         </div>

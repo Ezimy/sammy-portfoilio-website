@@ -1,7 +1,22 @@
 .about-page{
     z-index: 1;
-    animation: fadeIn 1s 2s backwards;
+    .hidden{
+      opacity: 0;
+    }
+    .show{
+      opacity: 1;
+      animation-name: fadeIn;
+      animation-iteration-count: 1;
+      animation-timing-function: ease-in;
+      animation-duration: 2s;
+      animation-fill-mode: backwards;
+    }
     .about-hero{
+        animation-name: fadeIn;
+        animation-iteration-count: 1;
+        animation-timing-function: ease-in;
+        animation-duration: 2s;
+        animation-fill-mode: backwards;
         display: flex;
         align-items: center;
         height: 100vh;

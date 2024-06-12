@@ -1,7 +1,6 @@
 import './index.scss'
 import React from 'react';
 import resumePDF from '../../assets/pdfs/resume.pdf'
-import Loader from 'react-loaders';
 import { Document, Page, pdfjs} from 'react-pdf';
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -51,7 +50,6 @@ const Resume = () =>{
                 </div>
             </section>
         </main>
-        <Loader type='cube-transition'/>
       </>
     )
 }

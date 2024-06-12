@@ -1,4 +1,3 @@
-import Loader from "react-loaders";
 import Typewriter from "typewriter-effect"
 import { useRef } from 'react'
 import emailjs from '@emailjs/browser'
@@ -58,7 +57,6 @@ const Contact = () =>{
                     </div>
                 </section>
             </main>
-            <Loader type='cube-transition'/>
         </>
     )
 }

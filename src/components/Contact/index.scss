@@ -68,3 +68,19 @@
         }
     }
 }
+@media only screen and (max-width: 600px) {
+    .contact-page {
+        section {
+            .contact-container {
+                .contact-left {
+                    height: 100vh;
+                    width: 100vw;
+                }
+                
+                .contact-right {
+                    display: none;
+                }
+            }
+        }
+    }
+}

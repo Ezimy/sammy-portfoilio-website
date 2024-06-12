@@ -1,6 +1,16 @@
 .home-page{
   z-index: 1;
-  animation: fadeIn 1s 2s backwards;
+  .hidden{
+    opacity: 0;
+  }
+  .show{
+    opacity: 1;
+    animation-name: fadeIn;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 2s;
+    animation-fill-mode: backwards;
+  }
   .greeting{
     height: 100vh;
     display: flex;
@@ -14,7 +24,6 @@
     img{
       width: 500px;
       height: auto;
-      animation: fadeIn 1s 1s backwards;
     }
     .flat-button{
       display: block;
@@ -37,7 +46,7 @@
     }
   }
   .intro{
-    animation: fadeIn 1s 1s backwards;
+    // height: 100vh;
     display: flex;
     justify-content: space-evenly;
     gap: 5rem;
@@ -52,7 +61,8 @@
       }
     }
     img{
-      border-radius: 45%;
+      border-radius: 50%;
+      border: 2px solid #44cfcb;
       width: 400px;
       height: auto;
     }

@@ -4,8 +4,8 @@ import About from './components/About';
 import Home from './components/Home';
 import Contact from './components/Contact';
 import Navbar from './components/Navbar';
-import Footer from './components/Footer'
-import Resume from './components/Resume'
+import Footer from './components/Footer';
+import Resume from './components/Resume';
 function App(){
     return(
     <>

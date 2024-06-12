@@ -1,4 +1,3 @@
-import Loader from "react-loaders";
 import Typewriter from "typewriter-effect"
 import aboutIllustration from "../../assets/images/about.svg"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -12,12 +11,25 @@ import {
 import { faC } from "@fortawesome/free-solid-svg-icons";
 import './index.scss'
 import ParticleComponent from '../particles'
+import {useInView} from 'react-intersection-observer'
 const About =()=>{
+    const { ref:heroRef, inView:heroIsVisible} = useInView({
+        triggerOnce:true,
+        delay: 200
+    });
+    const { ref:skillsRef, inView:skillsIsVisible} = useInView({
+        triggerOnce:true,
+        delay: 200
+    });
+    const { ref:toolsRef, inView:toolsIsVisible} = useInView({
+        triggerOnce:true,
+        delay: 200
+    });
     return(
         <>
             <ParticleComponent id='particles'/>
             <main className="about-page">
-                <section className="about-hero">
+                <section className={`about-hero ${heroIsVisible? 'show' : 'hidden'}`} ref={heroRef}>
                     <div className="about-text">
                         <h1>
                             <Typewriter
@@ -37,7 +49,7 @@ const About =()=>{
                     </div>
                     <img src={aboutIllustration}/>
                 </section>
-                <section className="skills">
+                <section className={`skills ${skillsIsVisible? 'show' : 'hidden'}`} ref={skillsRef}>
                     <h1>Skills</h1>
                     <div className="icon-grid">
                         <div className="grid-item">
@@ -60,7 +72,7 @@ const About =()=>{
                         </div>
                     </div>
                 </section>
-                <section className="tools">
+                <section className={`tools ${toolsIsVisible? 'show' : 'hidden'}`} ref={toolsRef}>
                     <h1>
                         Developer Tools I Use
                     </h1>
@@ -83,7 +95,6 @@ const About =()=>{
                     </div>
                 </section>
             </main>
-            <Loader type='cube-transition'/>
         </>
     )
 }

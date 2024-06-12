@@ -20,13 +20,29 @@
         }
     }
     nav{
+        font-family: "Rubik";
         font-size: 1.5rem;
         padding: 1rem 4rem;
         display: flex;
         gap: 2rem;
-        a.active{
-            svg{
-                color: #44CFCB;
+        .link{
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+            .hover-text{
+                display: none;
+                font-size: 1rem;
+                color: #44cfcb;
+            }
+            &:hover{
+                .fa-icon{
+                    display: none;
+                }
+                .hover-text{
+                    display: inline;
+                }
             }
         }
     }

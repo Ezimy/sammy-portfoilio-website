@@ -1,6 +1,11 @@
 import Typewriter from "typewriter-effect"
 import aboutIllustration from "../../assets/images/about.svg"
+import componentLibraryPreview from '../../assets/images/component-library-preview.PNG'
 import colorGeneratorPreview from '../../assets/images/color-generator-preview.PNG'
+import quizzicalPreview from '../../assets/images/quizzical.PNG'
+import watchlistPreview from '../../assets/images/watchlist-preview.PNG'
+import dashboardPreview from '../../assets/images/dashboard-preview.PNG'
+import passwordGeneratorPreview from '../../assets/images/password-generator-preview.PNG'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
     faHtml5,
@@ -102,7 +107,7 @@ const About =()=>{
                     <div className="projects-grid">
                     <div className="grid-item">
                             <div className="preview">
-                                <img src="" alt="components-library" />
+                                <img src={componentLibraryPreview} alt="components-library" />
                             </div>
                             <h2>
                                 Components Library++
@@ -117,7 +122,7 @@ const About =()=>{
                         </div>
                         <div className="grid-item">
                             <div className="preview">
-
+                                <img src={quizzicalPreview} alt="quizzical-preview" />
                             </div>
                             <h2>
                                 quzzical
@@ -132,7 +137,7 @@ const About =()=>{
                         </div>
                         <div className="grid-item">
                             <div className="preview">
-
+                                <img src={watchlistPreview} alt="watchlist-preview" />
                             </div>
                             <h2>
                                 Movie Watchlist
@@ -158,36 +163,6 @@ const About =()=>{
                             <div className="project-links">
                                 <a href="https://github.com/Ezimy/color-scheme-generator" target="_blank">GitHub</a>
                                 <a href="https://musical-sorbet-6c7be5.netlify.app/" target="_blank">Demo</a>
-                            </div>
-                        </div>
-                        <div className="grid-item">
-                            <div className="preview">
-
-                            </div>
-                            <h2>
-                                New Tab Dashboard Extension
-                            </h2>    
-                            <p>
-                                Google Extension using Javascript that fetches a background from unspash, weather information, and Crypto Price
-                            </p>
-                            <div className="project-links">
-                                <a href="https://github.com/Ezimy/new_tab_project" target="_blank">GitHub</a>
-                                <a href="https://dainty-hummingbird-939668.netlify.app/" target="_blank">Demo</a>
-                            </div>
-                        </div>
-                        <div className="grid-item">
-                            <div className="preview">
-
-                            </div>
-                            <h2>
-                                Password Generator
-                            </h2>    
-                            <p>
-                                A javascript App that generates a password based on a set of options
-                            </p>
-                            <div className="project-links">
-                                <a href="https://github.com/Ezimy/password-generator" target="_blank">GitHub</a>
-                                <a href="https://verdant-vacherin-57618f.netlify.app/" target="_blank">Demo</a>
                             </div>
                         </div>
                         <div>

@@ -14,6 +14,11 @@
             border: 1px solid #44CFCB;
         }
         button:disabled{
+            cursor: not-allowed;
+            background-color: #224870;
+            color: #4ea5d9;
+        }
+        button:disabled:hover{
             background-color: #224870;
             color: #4ea5d9;
         }
@@ -27,7 +32,10 @@
                 text-decoration: none;
                 color: #44CFCB;
             }
-            a:hover{
+        }
+        .download-btn:hover{
+            background-color: #44CFCB;
+            a{
                 color: #122C34;
             }
         }

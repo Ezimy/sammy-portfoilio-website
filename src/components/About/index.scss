@@ -96,4 +96,59 @@
             background-color: #44CFCB;
           }
     }
+    .projects{
+      padding: 2rem;
+      border: 1px solid white;
+      text-align: center;
+      .projects-grid {
+        display: grid;
+        grid-template-columns: auto auto;
+        background-color: transparent;
+        padding: 10px;
+        gap: 1rem;
+      }
+      .grid-item {
+        padding: 5rem;
+        display: flex;
+        flex-direction: column;
+        background-color: transparent;
+        width: auto;
+        height: auto;
+        border: 1px solid #44CFCB;
+        padding: 1.5rem;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        h2{
+          font-size: 1.5rem;
+        }
+        p{
+          font-size: 1rem;
+        }
+        .preview{
+          padding: 1rem;
+          width: 800px;
+          height: 800px;
+          border: 1px solid white;
+          img{
+            width: auto;
+            height: auto;
+          }
+        }
+        .project-links{
+          display: flex;
+          gap: 1rem;
+          a{
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            color: #44CFCB;
+            border: 1px solid #44CFCB;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+          }
+        }
+      }
+    }
 }

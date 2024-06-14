@@ -1,5 +1,6 @@
 import Typewriter from "typewriter-effect"
 import aboutIllustration from "../../assets/images/about.svg"
+import colorGeneratorPreview from '../../assets/images/color-generator-preview.PNG'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
     faHtml5,
@@ -7,11 +8,11 @@ import {
     faCss3,
     faReact,
     faJava
-  } from '@fortawesome/free-brands-svg-icons'
+  } from '@fortawesome/free-brands-svg-icons';
 import { faC } from "@fortawesome/free-solid-svg-icons";
-import './index.scss'
-import ParticleComponent from '../particles'
-import {useInView} from 'react-intersection-observer'
+import './index.scss';
+import ParticleComponent from '../particles';
+import {useInView} from 'react-intersection-observer';
 const About =()=>{
     const { ref:heroRef, inView:heroIsVisible} = useInView({
         triggerOnce:true,
@@ -91,6 +92,106 @@ const About =()=>{
                         </div>
                         <div className="grid-item">                              
                             <i class="devicon-figma-plain colored"></i>
+                        </div>
+                    </div>
+                </section>
+                <section className="projects">
+                    <h1>
+                        My Projects
+                    </h1>
+                    <div className="projects-grid">
+                    <div className="grid-item">
+                            <div className="preview">
+                                <img src="" alt="components-library" />
+                            </div>
+                            <h2>
+                                Components Library++
+                            </h2>
+                            <p>
+                                A React project that is a preview of various components styled differently according to different props passed to the component
+                            </p>
+                            <div className="project-links">
+                                <a href="https://github.com/Ezimy/components-library" target="_blank">GitHub</a>
+                                <a href="https://celadon-gelato-7fbb36.netlify.app/" target="_blank">Demo</a>
+                            </div>
+                        </div>
+                        <div className="grid-item">
+                            <div className="preview">
+
+                            </div>
+                            <h2>
+                                quzzical
+                            </h2>
+                            <p>
+                                A React project that generates a quiz with questions generated from a form
+                            </p>
+                            <div className="project-links">
+                                <a href="https://github.com/Ezimy/quizzical_project" target="_blank">GitHub</a>
+                                <a href="https://unique-kheer-67caf2.netlify.app/" target="_blank">Demo</a>
+                            </div>
+                        </div>
+                        <div className="grid-item">
+                            <div className="preview">
+
+                            </div>
+                            <h2>
+                                Movie Watchlist
+                            </h2>
+                            <p>
+                                A Javascript project that lets you search for movies that are fetched from omdbapi to add to a Watchlist that has movies stored in local storage
+                            </p>
+                            <div className="project-links">
+                                <a href="https://github.com/Ezimy/movie_watchlist_project" target="_blank">GitHub</a>
+                                <a href="https://splendorous-semolina-82b3ed.netlify.app/" target="_blank">Demo</a>
+                            </div>
+                        </div>
+                        <div className="grid-item">
+                            <div className="preview">
+                                <img src={colorGeneratorPreview} alt="color-generator-preview" />
+                            </div>
+                            <h2>
+                                color scheme generator
+                            </h2>
+                            <p>
+                                a simple Javascript project that fetchs from thecolorapi.com to generate a color scheme
+                            </p>
+                            <div className="project-links">
+                                <a href="https://github.com/Ezimy/color-scheme-generator" target="_blank">GitHub</a>
+                                <a href="https://musical-sorbet-6c7be5.netlify.app/" target="_blank">Demo</a>
+                            </div>
+                        </div>
+                        <div className="grid-item">
+                            <div className="preview">
+
+                            </div>
+                            <h2>
+                                New Tab Dashboard Extension
+                            </h2>    
+                            <p>
+                                Google Extension using Javascript that fetches a background from unspash, weather information, and Crypto Price
+                            </p>
+                            <div className="project-links">
+                                <a href="https://github.com/Ezimy/new_tab_project" target="_blank">GitHub</a>
+                                <a href="https://dainty-hummingbird-939668.netlify.app/" target="_blank">Demo</a>
+                            </div>
+                        </div>
+                        <div className="grid-item">
+                            <div className="preview">
+
+                            </div>
+                            <h2>
+                                Password Generator
+                            </h2>    
+                            <p>
+                                A javascript App that generates a password based on a set of options
+                            </p>
+                            <div className="project-links">
+                                <a href="https://github.com/Ezimy/password-generator" target="_blank">GitHub</a>
+                                <a href="https://verdant-vacherin-57618f.netlify.app/" target="_blank">Demo</a>
+                            </div>
+                        </div>
+                        <div>
+                            stay tuned more projects are in the works
                         </div>
                     </div>
                 </section>

@@ -1,8 +1,8 @@
 import Typewriter from "typewriter-effect"
 import { useRef } from 'react'
 import emailjs from '@emailjs/browser'
-import aboutIllustration from "../../assets/images/about.svg"
 import ParticleComponent from '../particles'
+import contactIllustration from '../../assets/images/contact-me.png'
 import './index.scss'
 const Contact = () =>{
     const form = useRef()
@@ -52,7 +52,7 @@ const Contact = () =>{
                             <button type="submit" className="flat-button">SEND</button>
                         </form>
                         <div className="contact-right">
-                            <img src={aboutIllustration} alt="illustration"/>
+                            <img src={contactIllustration} alt="illustration"/>
                         </div>
                     </div>
                 </section>

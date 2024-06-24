@@ -7,6 +7,8 @@ import watchlistPreview from '../../assets/images/watchlist-preview.PNG'
 import dashboardPreview from '../../assets/images/dashboard-preview.PNG'
 import passwordGeneratorPreview from '../../assets/images/password-generator-preview.PNG'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGithub } from "@fortawesome/free-brands-svg-icons"
+import { faFile } from "@fortawesome/free-solid-svg-icons"
 import {
     faHtml5,
     faJsSquare,
@@ -116,8 +118,8 @@ const About =()=>{
                                 A React project that is a preview of various components styled differently according to different props passed to the component
                             </p>
                             <div className="project-links">
-                                <a href="https://github.com/Ezimy/components-library" target="_blank">GitHub</a>
-                                <a href="https://celadon-gelato-7fbb36.netlify.app/" target="_blank">Demo</a>
+                                <a href="https://github.com/Ezimy/components-library" target="_blank">  <FontAwesomeIcon icon={faGithub} className="link-icon"/> GitHub</a>
+                                <a href="https://celadon-gelato-7fbb36.netlify.app/" target="_blank">  <FontAwesomeIcon icon={faFile} className="link-icon"/> Demo</a>
                             </div>
                         </div>
                         <div className="grid-item">
@@ -131,8 +133,8 @@ const About =()=>{
                                 A React project that generates a quiz with questions generated from a form
                             </p>
                             <div className="project-links">
-                                <a href="https://github.com/Ezimy/quizzical_project" target="_blank">GitHub</a>
-                                <a href="https://unique-kheer-67caf2.netlify.app/" target="_blank">Demo</a>
+                                <a href="https://github.com/Ezimy/quizzical_project" target="_blank"> <FontAwesomeIcon icon={faGithub} className="link-icon"/> GitHub</a>
+                                <a href="https://unique-kheer-67caf2.netlify.app/" target="_blank"> <FontAwesomeIcon icon={faFile} className="link-icon"/> Demo</a>
                             </div>
                         </div>
                         <div className="grid-item">
@@ -146,8 +148,8 @@ const About =()=>{
                                 A Javascript project that lets you search for movies that are fetched from omdbapi to add to a Watchlist that has movies stored in local storage
                             </p>
                             <div className="project-links">
-                                <a href="https://github.com/Ezimy/movie_watchlist_project" target="_blank">GitHub</a>
-                                <a href="https://splendorous-semolina-82b3ed.netlify.app/" target="_blank">Demo</a>
+                                <a href="https://github.com/Ezimy/movie_watchlist_project" target="_blank"> <FontAwesomeIcon icon={faGithub} className="link-icon"/> GitHub</a>
+                                <a href="https://splendorous-semolina-82b3ed.netlify.app/" target="_blank"> <FontAwesomeIcon icon={faFile} className="link-icon"/>Demo</a>
                             </div>
                         </div>
                         <div className="grid-item">
@@ -161,11 +163,11 @@ const About =()=>{
                                 a simple Javascript project that fetchs from thecolorapi.com to generate a color scheme
                             </p>
                             <div className="project-links">
-                                <a href="https://github.com/Ezimy/color-scheme-generator" target="_blank">GitHub</a>
-                                <a href="https://musical-sorbet-6c7be5.netlify.app/" target="_blank">Demo</a>
+                                <a href="https://github.com/Ezimy/color-scheme-generator" target="_blank"> <FontAwesomeIcon icon={faGithub} className="link-icon"/> GitHub</a>
+                                <a href="https://musical-sorbet-6c7be5.netlify.app/" target="_blank"> <FontAwesomeIcon icon={faFile} className="link-icon"/>Demo</a>
                             </div>
                         </div>
-                        <div>
+                        <div className="more-projects">
                             stay tuned more projects are in the works
                         </div>
                     </div>

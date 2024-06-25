@@ -4,20 +4,24 @@ import emailjs from '@emailjs/browser'
 import ParticleComponent from '../particles'
 import contactIllustration from '../../assets/images/contact-me.png'
 import './index.scss'
-const Contact = () =>{
-    const form = useRef()
+export const Contact = () => {
+    const form = useRef();
+  
     const sendEmail = (e) => {
-        e.preventDefault()
-        emailjs.sendForm('service_zccs6b9', 'template_bo1e8l8', form.current).then(
-            () => {
-                alert('Message successfully sent!')
-                window.location.reload(false)
-            },
-            () => {
-                alert('Failed to send the message, please try again')
-            },
-          );
-      }
+      e.preventDefault();
+      emailjs
+        .sendForm('service_zccs6b9', 'template_bo1e8l8', form.current, {
+          publicKey: 'as_0mRyQ9CPH7I9Eb',
+        })
+        .then(
+          () => {
+            alert('SUCCESS!');
+          },
+          (error) => {
+            alert('FAILED...', error.text);
+          },
+        );
+    };
     return(
         <>
             <ParticleComponent/>
@@ -38,18 +42,18 @@ const Contact = () =>{
                                 />
                             </h1>
                             <p>
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio architecto dolore sapiente numquam repellat incidunt voluptatum consequatur neque. Placeat at modi eos, debitis blanditiis nam quisquam doloribus quos voluptates possimus!
+                            I’d love to hear from you! Whether you have a question, feedback, or just want to say hello, feel free to reach out. Please fill out the contact form below if you wish to contact me and I will respond as soon as possible.
                             </p>
                             <hr/>
-                            <input placeholder="Name" type="text" name="name" required></input>
-                            <input placeholder="Email" type="email" name="email" required></input>
+                            <input placeholder="Name" type="text" name="user_name" required></input>
+                            <input placeholder="Email" type="email" name="user_email" required></input>
                             <input placeholder="Subject" type="text" name="subject" required></input>
                             <textarea
                                 placeholder="Message"
                                 name="message"
                                 required
                             ></textarea>
-                            <button type="submit" className="flat-button">SEND</button>
+                            <button type="submit" value="Send" className="flat-button">SEND</button>
                         </form>
                         <div className="contact-right">
                             <img src={contactIllustration} alt="illustration"/>

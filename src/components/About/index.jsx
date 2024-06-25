@@ -1,5 +1,5 @@
 import Typewriter from "typewriter-effect"
-import aboutIllustration from "../../assets/images/about.svg"
+import aboutImg from '../../assets/images/profile-image.jpg'
 import componentLibraryPreview from '../../assets/images/component-library-preview.PNG'
 import colorGeneratorPreview from '../../assets/images/color-generator-preview.PNG'
 import quizzicalPreview from '../../assets/images/quizzical.PNG'
@@ -33,6 +33,10 @@ const About =()=>{
         triggerOnce:true,
         delay: 200
     });
+    const { ref:projectsRef, inView:projectsIsVisible} = useInView({
+        triggerOnce:true,
+        delay: 200
+    });
     return(
         <>
             <ParticleComponent id='particles'/>
@@ -55,28 +59,34 @@ const About =()=>{
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores error molestiae temporibus voluptatibus. Numquam dolorum ipsa reiciendis explicabo quos praesentium, tempore officia, itaque reprehenderit error in rerum voluptates cupiditate soluta!
                         </p>
                     </div>
-                    <img src={aboutIllustration}/>
+                    <img src={aboutImg}/>
                 </section>
                 <section className={`skills ${skillsIsVisible? 'show' : 'hidden'}`} ref={skillsRef}>
                     <h1>Skills</h1>
                     <div className="icon-grid">
                         <div className="grid-item">
-                            <FontAwesomeIcon icon={faHtml5} color="#F06529" />
+                            <FontAwesomeIcon icon={faHtml5} color="#F06529" className="grid-icon"/>
+                            <span className="hover-text">HTML5</span>
                         </div>
                         <div className="grid-item">
-                            <FontAwesomeIcon icon={faCss3} color="#28A4D9" />
+                            <FontAwesomeIcon icon={faCss3} color="#28A4D9" className="grid-icon"/>
+                            <span className="hover-text">CSS</span>
                         </div>
                         <div className="grid-item">
-                            <FontAwesomeIcon icon={faJsSquare} color="#EFD81D" />
+                            <FontAwesomeIcon icon={faJsSquare} color="#EFD81D" className="grid-icon"/>
+                            <span className="hover-text">JavaScript</span>
                         </div>
                         <div className="grid-item">
-                            <FontAwesomeIcon icon={faReact} color="#5ED4F4" />
+                            <FontAwesomeIcon icon={faReact} color="#5ED4F4" className="grid-icon"/>
+                            <span className="hover-text">React.js</span>
                         </div>
                         <div className="grid-item">
-                            <FontAwesomeIcon icon={faJava} color="#5382a1" />
+                            <FontAwesomeIcon icon={faJava} color="#5382a1" className="grid-icon"/>
+                            <span className="hover-text">Java</span>
                         </div>
                         <div className="grid-item">
-                            <FontAwesomeIcon icon={faC} color="#A8B9CC" />
+                            <FontAwesomeIcon icon={faC} color="#A8B9CC" className="grid-icon"/>
+                            <span className="hover-text">C</span>
                         </div>
                     </div>
                 </section>
@@ -86,23 +96,28 @@ const About =()=>{
                     </h1>
                     <div className="icon-grid">
                         <div className="grid-item">      
-                            <i class="devicon-eclipse-plain colored"></i>
+                            <i className="devicon-eclipse-plain colored grid-icon"></i>
+                            <span className="hover-text">Eclipse</span>
                         </div>
                         <div className="grid-item">      
-                            <i class="devicon-vscode-plain colored"></i>
+                            <i className="devicon-vscode-plain colored grid-icon"></i>
+                            <span className="hover-text">Visual Studio Code</span>
                         </div>
                         <div className="grid-item">      
-                            <i class="devicon-windows11-original colored"></i>
+                            <i className="devicon-windows11-original colored grid-icon"></i>
+                            <span className="hover-text">Windows OS</span>
                         </div>
                         <div className="grid-item">         
-                            <i class="devicon-github-original colored"></i>
+                            <i className="devicon-github-original colored grid-icon"></i>
+                            <span className="hover-text">GitHub</span>
                         </div>
                         <div className="grid-item">                              
-                            <i class="devicon-figma-plain colored"></i>
+                            <i className="devicon-figma-plain colored grid-icon"></i>
+                            <span className="hover-text">Figma</span>
                         </div>
                     </div>
                 </section>
-                <section className="projects">
+                <section className={`projects ${projectsIsVisible? 'show' : 'hidden'}`} ref={projectsRef}>
                     <h1>
                         My Projects
                     </h1>
@@ -167,9 +182,9 @@ const About =()=>{
                                 <a href="https://musical-sorbet-6c7be5.netlify.app/" target="_blank"> <FontAwesomeIcon icon={faFile} className="link-icon"/>Demo</a>
                             </div>
                         </div>
-                        <div className="more-projects">
-                            stay tuned more projects are in the works
-                        </div>
+                    </div>
+                    <div className="more-projects">
+                            More Projects Coming Soon
                     </div>
                 </section>
             </main>

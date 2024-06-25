@@ -14,7 +14,6 @@ pdfjs.GlobalWorkerOptions.workerSrc = new URL(
 const Resume = () =>{
     const [numPages, setNumPages] = useState(null);
     const [pageNumber, setPageNumber] = useState(1);
-
     function onDocumentLoadSuccess({ numPages }) {
         setNumPages(numPages);
       }

@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom';
 import './index.scss'
 import Typewriter from "typewriter-effect"
 import Illustration from '../../assets/images/illustration.svg'
-import introImg from '../../assets/images/profile-image.jpg'
 import ParticleComponent from '../particles'
 import {useInView} from 'react-intersection-observer'
 const Home = ()=>{
@@ -10,10 +9,10 @@ const Home = ()=>{
         triggerOnce:true,
         delay: 200
     });
-    const { ref:introRef, inView:introIsVisible} = useInView({
-        triggerOnce:true,
-        delay: 200
-    });
+    // const { ref:introRef, inView:introIsVisible} = useInView({
+    //     triggerOnce:true,
+    //     delay: 200
+    // });
     return(
         <>
         <ParticleComponent id='particles'/>
@@ -41,7 +40,7 @@ const Home = ()=>{
                 </div>
                 <img src={Illustration} alt='illustration'/>
             </section>
-            <section className={`intro ${introIsVisible ? 'show' : 'hidden'}`} ref={introRef}>
+            {/* <section className={`intro ${introIsVisible ? 'show' : 'hidden'}`} ref={introRef}>
                 <div className='intro-text'>
                     <h1>Introduction</h1>
                     <p>
@@ -49,7 +48,7 @@ const Home = ()=>{
                     </p>
                 </div>
                 <img src={introImg}/>
-            </section>
+            </section> */}
         </main>
         </>
     )

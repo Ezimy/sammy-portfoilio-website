@@ -1,7 +1,8 @@
 footer{
     z-index: 1;
     background-color: #181818;
-    padding: 1rem 5rem;
+    padding: 1rem 3rem;
+    bottom: 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -10,6 +11,7 @@ footer{
     h3{
         font-size: 0.75rem;
         font-family: sans-serif;
+        // margin-left: 3rem;
     }
     ul{
         display: flex;
@@ -17,7 +19,7 @@ footer{
         justify-content: space-between;
         align-items: center;
         gap: 1rem;
-
+        // margin-right: 3rem;
         li{
             a{
             font-size: 1.5rem; 

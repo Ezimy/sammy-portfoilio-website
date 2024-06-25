@@ -17,7 +17,7 @@ function Footer(){
                     </li>
                     <li>
                         <a 
-                        href='github.com/Ezimy/'
+                        href='https://github.com/Ezimy'
                         rel='norefferer'
                         target='_blank'
                         >
@@ -26,7 +26,7 @@ function Footer(){
                     </li>
                     <li>
                         <a 
-                        href='www.youtube.com/@sammyyang5549'
+                        href='https://www.youtube.com/channel/UCq0lf7lFE680b-oJcZRdTGA'
                         rel='norefferer'
                         target='_blank'
                         >

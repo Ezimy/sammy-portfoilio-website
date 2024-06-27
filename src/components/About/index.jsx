@@ -4,8 +4,6 @@ import componentLibraryPreview from '../../assets/images/component-library-previ
 import colorGeneratorPreview from '../../assets/images/color-generator-preview.PNG'
 import quizzicalPreview from '../../assets/images/quizzical.PNG'
 import watchlistPreview from '../../assets/images/watchlist-preview.PNG'
-import dashboardPreview from '../../assets/images/dashboard-preview.PNG'
-import passwordGeneratorPreview from '../../assets/images/password-generator-preview.PNG'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub } from "@fortawesome/free-brands-svg-icons"
 import { faFile } from "@fortawesome/free-solid-svg-icons"
@@ -56,7 +54,9 @@ const About =()=>{
                             />
                         </h1>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores error molestiae temporibus voluptatibus. Numquam dolorum ipsa reiciendis explicabo quos praesentium, tempore officia, itaque reprehenderit error in rerum voluptates cupiditate soluta!
+                                My name is Sammy Yang and I'm from Ontario, Canada and Graduated from York University with a BSc in Computer Science.
+                                I am motivated web developer with a focus on front-end development with React.js framework.
+                                As a web developer I enjoy creating high-quality web applications and am looking forward to finding a position that will utilize my skillset.
                         </p>
                     </div>
                     <img src={aboutImg}/>
@@ -142,7 +142,7 @@ const About =()=>{
                                 <img src={quizzicalPreview} alt="quizzical-preview" />
                             </div>
                             <h2>
-                                quzzical
+                                Quzzical
                             </h2>
                             <p>
                                 A React project that generates a quiz with questions generated from a form
@@ -160,7 +160,7 @@ const About =()=>{
                                 Movie Watchlist
                             </h2>
                             <p>
-                                A Javascript project that lets you search for movies that are fetched from omdbapi to add to a Watchlist that has movies stored in local storage
+                                A Javascript project that lets you search for movies that are fetched from omdbapi to add to a watchlist that has movies stored in local storage
                             </p>
                             <div className="project-links">
                                 <a href="https://github.com/Ezimy/movie_watchlist_project" target="_blank"> <FontAwesomeIcon icon={faGithub} className="link-icon"/> GitHub</a>
@@ -172,10 +172,10 @@ const About =()=>{
                                 <img src={colorGeneratorPreview} alt="color-generator-preview" />
                             </div>
                             <h2>
-                                color scheme generator
+                                Color Scheme Generator
                             </h2>
                             <p>
-                                a simple Javascript project that fetchs from thecolorapi.com to generate a color scheme
+                                A Javascript project that fetchs from thecolorapi.com to generate a color scheme
                             </p>
                             <div className="project-links">
                                 <a href="https://github.com/Ezimy/color-scheme-generator" target="_blank"> <FontAwesomeIcon icon={faGithub} className="link-icon"/> GitHub</a>

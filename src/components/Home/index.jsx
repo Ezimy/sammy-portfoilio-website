@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom';
 import './index.scss'
 import Typewriter from "typewriter-effect"
-import Illustration from '../../assets/images/illustration.svg'
+import Lottie from 'lottie-react';
+import computerAnimation from '../../assets/animations/computer-animation.json'
 import ParticleComponent from '../particles'
 import {useInView} from 'react-intersection-observer'
 const Home = ()=>{
@@ -26,7 +27,7 @@ const Home = ()=>{
                             typewriter
                                 .pauseFor(1000)
                                 .changeDelay(50)
-                                .typeString("Hi 👋, <br/> I'm Sammy Yang<br/> A Web Developer")
+                                .typeString('Hi <span class="handwave">👋</span>, <br/> I\'m Sammy Yang<br/> A Web Developer')
                                 .start()
                             }}
                         />
@@ -34,21 +35,13 @@ const Home = ()=>{
                     <h2>
                         Frontend Developer/React.js Expert/ JavaScript Expert
                     </h2>
-                    <div>
-                        <Link to="/contact" className='flat-button'>CONTACT ME</Link>
+                    <div className='button-section'>
+                    <Link to="/about" className='flat-button'>ABOUT</Link>
+                        <Link to="/contact" className='flat-button'>CONTACT</Link>
                     </div>
                 </div>
-                <img src={Illustration} alt='illustration'/>
+                <Lottie animationData={computerAnimation} className='illustration'/>
             </section>
-            {/* <section className={`intro ${introIsVisible ? 'show' : 'hidden'}`} ref={introRef}>
-                <div className='intro-text'>
-                    <h1>Introduction</h1>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum aliquid distinctio tenetur obcaecati velit, quibusdam consequatur ipsum quae laboriosam officiis qui nisi facilis nesciunt autem eius doloremque rerum debitis delectus?
-                    </p>
-                </div>
-                <img src={introImg}/>
-            </section> */}
         </main>
         </>
     )

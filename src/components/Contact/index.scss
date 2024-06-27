@@ -59,10 +59,10 @@
                     color: #44cfcb;
                     background-color: #122c34;
                     border: 1px solid #44cfcb;
+                    transition: transform 0.3s, box-shadow 0.3s;
                 }
                 .flat-button:hover{
-                    background-color: #44cfcb;
-                    color: #122c34;
+                    box-shadow: 0 4px 8px #44cfcb;
                 }
             }
 

@@ -2,8 +2,9 @@ import Typewriter from "typewriter-effect"
 import { useRef } from 'react'
 import emailjs from '@emailjs/browser'
 import ParticleComponent from '../particles'
-import contactIllustration from '../../assets/images/contact-me.png'
+import contactAnimation from '../../assets/animations/contact-me.json'
 import './index.scss'
+import Lottie from "lottie-react"
 export const Contact = () => {
     const form = useRef();
   
@@ -56,7 +57,7 @@ export const Contact = () => {
                             <button type="submit" value="Send" className="flat-button">SEND</button>
                         </form>
                         <div className="contact-right">
-                            <img src={contactIllustration} alt="illustration"/>
+                            <Lottie animationData={contactAnimation} className='illustration' alt="contact-illustration"/>
                         </div>
                     </div>
                 </section>

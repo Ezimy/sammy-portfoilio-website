@@ -18,53 +18,53 @@
     justify-content: space-evenly;
     align-items: center;
     padding: 4rem 0;
+    @keyframes wave {
+      0% { transform: rotate(0deg); }
+      10% { transform: rotate(14deg); }
+      20% { transform: rotate(-8deg); }
+      30% { transform: rotate(14deg); }
+      40% { transform: rotate(-4deg); }
+      50% { transform: rotate(10deg); }
+      60% { transform: rotate(0deg); }
+      100% { transform: rotate(0deg); }
+    }
+    
+    .handwave {
+      display: inline-block;
+      animation-name: wave;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+      transform-origin: 70% 70%;
+    }
     h2{
       margin-top: 20px;
     }
-    img{
-      width: 500px;
+    .illustration{
+      width: 600px;
       height: auto;
     }
-    .flat-button{
-      display: block;
-      color: #44cfcb;
-      background-color: #122c34;
-      width: fit-content;
-      font-size: 1rem;
-      font-weight: 400;
-      letter-spacing: 0.25rem;
-      text-decoration: none;
-      font-family: sans-serif;
-      margin-top: 1rem;
-      padding: 0.75rem 1.25rem;
-      border: 1px solid #44cfcb;
-      border-radius: 0.25rem;
-      &:hover{
-          background-color: #44cfcb;
-          color: #122c34;
-      }
-    }
-  }
-  .intro{
-    // height: 100vh;
+    .button-section{
     display: flex;
-    justify-content: space-evenly;
-    gap: 5rem;
-    margin-bottom: 2rem;
-    .intro-text{
-      width: 500px;
-      h1{
-        margin-bottom: 2rem;
+    gap: 1rem;
+      .flat-button{
+        display: block;
+        color: #44cfcb;
+        background-color: #122c34;
+        width: fit-content;
+        font-size: 1rem;
+        font-weight: 400;
+        letter-spacing: 0.25rem;
+        text-decoration: none;
+        font-family: sans-serif;
+        margin-top: 1rem;
+        padding: 0.75rem 1.25rem;
+        border: 1px solid #44cfcb;
+        border-radius: 0.25rem;
+        transition: transform 0.3s, box-shadow 0.3s;
+        &:hover{
+          box-shadow: 0 4px 8px #44cfcb;
+        }
       }
-      h2{
-        line-height: 3rem;
-      }
-    }
-    img{
-      border-radius: 50%;
-      border: 2px solid #44cfcb;
-      width: 400px;
-      height: auto;
     }
   }
 }

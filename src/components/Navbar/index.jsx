@@ -1,7 +1,7 @@
 import { Link, NavLink } from 'react-router-dom';
 import './index.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope, faHome, faUser, faFile } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faHome, faUser, faFile, faCode } from '@fortawesome/free-solid-svg-icons';
 import Initials from '../../assets/images/initials.png'
 function Navbar() {
     return(
@@ -26,6 +26,9 @@ function Navbar() {
                     <FontAwesomeIcon icon={faFile} color='#224870'className='fa-icon'/>
                     <span className="hover-text">Resume</span>
                 </NavLink>
+                <a href='https://github.com/Ezimy/sammy-portfoilio-website.git' target='_blank' className='repo-button'>
+                    <FontAwesomeIcon icon={faCode} color='#224870'/> Code
+                </a>
             </nav>
         </div>
     )

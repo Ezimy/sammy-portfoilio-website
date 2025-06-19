@@ -1,194 +1,357 @@
-import Typewriter from "typewriter-effect"
-import aboutImg from '../../assets/images/profile-image.jpg'
-import componentLibraryPreview from '../../assets/images/component-library-preview.PNG'
-import colorGeneratorPreview from '../../assets/images/color-generator-preview.PNG'
-import quizzicalPreview from '../../assets/images/quizzical.PNG'
-import watchlistPreview from '../../assets/images/watchlist-preview.PNG'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub } from "@fortawesome/free-brands-svg-icons"
-import { faFile } from "@fortawesome/free-solid-svg-icons"
+import Typewriter from "typewriter-effect";
+import aboutImg from "../../assets/images/profile-image.jpg";
+import componentLibraryPreview from "../../assets/images/component-library-preview.PNG";
+import colorGeneratorPreview from "../../assets/images/color-generator-preview.PNG";
+import quizzicalPreview from "../../assets/images/quizzical.PNG";
+import watchlistPreview from "../../assets/images/watchlist-preview.PNG";
+import breezyPreview from  "../../assets/images/breezy-preview.png";
+import geminiPreview from "../../assets/images/gemini-inventory-preview.png"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faFile } from "@fortawesome/free-solid-svg-icons";
 import {
-    faHtml5,
-    faJsSquare,
-    faCss3,
-    faReact,
-    faJava
-  } from '@fortawesome/free-brands-svg-icons';
+  faHtml5,
+  faJsSquare,
+  faCss3,
+  faReact,
+  faJava,
+  faNodeJs,
+} from "@fortawesome/free-brands-svg-icons";
 import { faC } from "@fortawesome/free-solid-svg-icons";
-import './index.scss';
-import ParticleComponent from '../particles';
-import {useInView} from 'react-intersection-observer';
-const About =()=>{
-    const { ref:heroRef, inView:heroIsVisible} = useInView({
-        triggerOnce:true,
-        delay: 200
-    });
-    const { ref:skillsRef, inView:skillsIsVisible} = useInView({
-        triggerOnce:true,
-        delay: 200
-    });
-    const { ref:toolsRef, inView:toolsIsVisible} = useInView({
-        triggerOnce:true,
-        delay: 200
-    });
-    const { ref:projectsRef, inView:projectsIsVisible} = useInView({
-        triggerOnce:true,
-        delay: 200
-    });
-    return(
-        <>
-            <ParticleComponent id='particles'/>
-            <main className="about-page">
-                <section className={`about-hero ${heroIsVisible? 'show' : 'hidden'}`} ref={heroRef}>
-                    <div className="about-text">
-                        <h1>
-                            <Typewriter
-                                loop={false}
-                                onInit={(typewriter) => {
-                                typewriter
-                                    .pauseFor(2000)
-                                    .changeDelay(50)
-                                    .typeString("About Me")
-                                    .start()
-                                }}
-                            />
-                        </h1>
-                        <p>
-                                My name is Sammy Yang and I'm from Ontario, Canada and Graduated from York University with a BSc in Computer Science.
-                                I am motivated web developer with a focus on front-end development with React.js framework.
-                                As a web developer I enjoy creating high-quality web applications and am looking forward to finding a position that will utilize my skillset.
-                        </p>
-                    </div>
-                    <img src={aboutImg}/>
-                </section>
-                <section className={`skills ${skillsIsVisible? 'show' : 'hidden'}`} ref={skillsRef}>
-                    <h1>Skills</h1>
-                    <div className="icon-grid">
-                        <div className="grid-item">
-                            <FontAwesomeIcon icon={faHtml5} color="#F06529" className="grid-icon"/>
-                            <span className="hover-text">HTML5</span>
-                        </div>
-                        <div className="grid-item">
-                            <FontAwesomeIcon icon={faCss3} color="#28A4D9" className="grid-icon"/>
-                            <span className="hover-text">CSS</span>
-                        </div>
-                        <div className="grid-item">
-                            <FontAwesomeIcon icon={faJsSquare} color="#EFD81D" className="grid-icon"/>
-                            <span className="hover-text">JavaScript</span>
-                        </div>
-                        <div className="grid-item">
-                            <FontAwesomeIcon icon={faReact} color="#5ED4F4" className="grid-icon"/>
-                            <span className="hover-text">React.js</span>
-                        </div>
-                        <div className="grid-item">
-                            <FontAwesomeIcon icon={faJava} color="#5382a1" className="grid-icon"/>
-                            <span className="hover-text">Java</span>
-                        </div>
-                        <div className="grid-item">
-                            <FontAwesomeIcon icon={faC} color="#A8B9CC" className="grid-icon"/>
-                            <span className="hover-text">C</span>
-                        </div>
-                    </div>
-                </section>
-                <section className={`tools ${toolsIsVisible? 'show' : 'hidden'}`} ref={toolsRef}>
-                    <h1>
-                        Developer Tools I Use
-                    </h1>
-                    <div className="icon-grid">
-                        <div className="grid-item">      
-                            <i className="devicon-eclipse-plain colored grid-icon"></i>
-                            <span className="hover-text">Eclipse</span>
-                        </div>
-                        <div className="grid-item">      
-                            <i className="devicon-vscode-plain colored grid-icon"></i>
-                            <span className="hover-text">Visual Studio Code</span>
-                        </div>
-                        <div className="grid-item">      
-                            <i className="devicon-windows11-original colored grid-icon"></i>
-                            <span className="hover-text">Windows OS</span>
-                        </div>
-                        <div className="grid-item">         
-                            <i className="devicon-github-original colored grid-icon"></i>
-                            <span className="hover-text">GitHub</span>
-                        </div>
-                        <div className="grid-item">                              
-                            <i className="devicon-figma-plain colored grid-icon"></i>
-                            <span className="hover-text">Figma</span>
-                        </div>
-                    </div>
-                </section>
-                <section className={`projects ${projectsIsVisible? 'show' : 'hidden'}`} ref={projectsRef}>
-                    <h1>
-                        My Projects
-                    </h1>
-                    <div className="projects-grid">
-                    <div className="grid-item">
-                            <div className="preview">
-                                <img src={componentLibraryPreview} alt="components-library" />
-                            </div>
-                            <h2>
-                                Components Library++
-                            </h2>
-                            <p>
-                                A React project that is a preview of various components styled differently according to different props passed to the component
-                            </p>
-                            <div className="project-links">
-                                <a href="https://github.com/Ezimy/components-library" target="_blank">  <FontAwesomeIcon icon={faGithub} className="link-icon"/> GitHub</a>
-                                <a href="https://celadon-gelato-7fbb36.netlify.app/" target="_blank">  <FontAwesomeIcon icon={faFile} className="link-icon"/> Demo</a>
-                            </div>
-                        </div>
-                        <div className="grid-item">
-                            <div className="preview">
-                                <img src={quizzicalPreview} alt="quizzical-preview" />
-                            </div>
-                            <h2>
-                                Quzzical
-                            </h2>
-                            <p>
-                                A React project that generates a quiz with questions generated from a form
-                            </p>
-                            <div className="project-links">
-                                <a href="https://github.com/Ezimy/quizzical_project" target="_blank"> <FontAwesomeIcon icon={faGithub} className="link-icon"/> GitHub</a>
-                                <a href="https://unique-kheer-67caf2.netlify.app/" target="_blank"> <FontAwesomeIcon icon={faFile} className="link-icon"/> Demo</a>
-                            </div>
-                        </div>
-                        <div className="grid-item">
-                            <div className="preview">
-                                <img src={watchlistPreview} alt="watchlist-preview" />
-                            </div>
-                            <h2>
-                                Movie Watchlist
-                            </h2>
-                            <p>
-                                A Javascript project that lets you search for movies that are fetched from omdbapi to add to a watchlist that has movies stored in local storage
-                            </p>
-                            <div className="project-links">
-                                <a href="https://github.com/Ezimy/movie_watchlist_project" target="_blank"> <FontAwesomeIcon icon={faGithub} className="link-icon"/> GitHub</a>
-                                <a href="https://splendorous-semolina-82b3ed.netlify.app/" target="_blank"> <FontAwesomeIcon icon={faFile} className="link-icon"/>Demo</a>
-                            </div>
-                        </div>
-                        <div className="grid-item">
-                            <div className="preview">
-                                <img src={colorGeneratorPreview} alt="color-generator-preview" />
-                            </div>
-                            <h2>
-                                Color Scheme Generator
-                            </h2>
-                            <p>
-                                A Javascript project that fetchs from thecolorapi.com to generate a color scheme
-                            </p>
-                            <div className="project-links">
-                                <a href="https://github.com/Ezimy/color-scheme-generator" target="_blank"> <FontAwesomeIcon icon={faGithub} className="link-icon"/> GitHub</a>
-                                <a href="https://musical-sorbet-6c7be5.netlify.app/" target="_blank"> <FontAwesomeIcon icon={faFile} className="link-icon"/>Demo</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="more-projects">
-                            More Projects Coming Soon
-                    </div>
-                </section>
-            </main>
-        </>
-    )
-}
+import "./index.scss";
+import ParticleComponent from "../particles";
+import { useInView } from "react-intersection-observer";
+const About = () => {
+  const { ref: heroRef, inView: heroIsVisible } = useInView({
+    triggerOnce: true,
+    delay: 200,
+  });
+  const { ref: languagesRef, inView: languagesIsVisible } = useInView({
+    triggerOnce: true,
+    delay: 200,
+  });
+  const { ref: skillsRef, inView: skillsIsVisible } = useInView({
+    triggerOnce: true,
+    delay: 200,
+  });
+  const { ref: toolsRef, inView: toolsIsVisible } = useInView({
+    triggerOnce: true,
+    delay: 200,
+  });
+  const { ref: projectsRef, inView: projectsIsVisible } = useInView({
+    triggerOnce: true,
+    delay: 200,
+  });
+  return (
+    <>
+      <ParticleComponent id="particles" />
+      <main className="about-page">
+        <section
+          className={`about-hero ${heroIsVisible ? "show" : "hidden"}`}
+          ref={heroRef}
+        >
+          <div className="about-text">
+            <h1>
+              <Typewriter
+                loop={false}
+                onInit={(typewriter) => {
+                  typewriter
+                    .pauseFor(2000)
+                    .changeDelay(50)
+                    .typeString("About Me")
+                    .start();
+                }}
+              />
+            </h1>
+            <p>
+              My name is Sammy Yang and I'm from Ontario, Canada and Graduated
+              from York University with a BSc in Computer Science. I am
+              motivated web developer with a focus on front-end development with
+              React.js framework. As a web developer I enjoy creating
+              high-quality web applications and am looking forward to finding a
+              position that will utilize my skillset.
+            </p>
+          </div>
+          <img src={aboutImg} />
+        </section>
+        <section
+          className={`skills ${languagesIsVisible ? "show" : "hidden"}`}
+          ref={languagesRef}
+        >
+          <h1>Programing Languages</h1>
+          <div className="icon-grid">
+            <div className="grid-item">
+              <FontAwesomeIcon
+                icon={faJsSquare}
+                color="#EFD81D"
+                className="grid-icon"
+              />
+              <span className="hover-text">JavaScript</span>
+            </div>
+            <div className="grid-item">
+              <FontAwesomeIcon
+                icon={faJava}
+                color="#5382a1"
+                className="grid-icon"
+              />
+              <span className="hover-text">Java</span>
+            </div>
+            <div className="grid-item">
+              <FontAwesomeIcon
+                icon={faC}
+                color="#A8B9CC"
+                className="grid-icon"
+              />
+              <span className="hover-text">C</span>
+            </div>
+          </div>
+        </section>
+        <section
+          className={`skills ${skillsIsVisible ? "show" : "hidden"}`}
+          ref={skillsRef}
+        >
+          <h1>Web Development</h1>
+          <div className="icon-grid">
+            <div className="grid-item">
+              <FontAwesomeIcon
+                icon={faHtml5}
+                color="#F06529"
+                className="grid-icon"
+              />
+              <span className="hover-text">HTML5</span>
+            </div>
+            <div className="grid-item">
+              <FontAwesomeIcon
+                icon={faCss3}
+                color="#28A4D9"
+                className="grid-icon"
+              />
+              <span className="hover-text">CSS</span>
+            </div>
+            <div className="grid-item">
+              <FontAwesomeIcon
+                icon={faNodeJs}
+                color="#EFD81D"
+                className="grid-icon"
+              />
+              <span className="hover-text">Node.js</span>
+            </div>
+            <div className="grid-item">
+              <FontAwesomeIcon
+                icon={faReact}
+                color="#5ED4F4"
+                className="grid-icon"
+              />
+              <span className="hover-text">React.js</span>
+            </div>
+            <div className="grid-item">
+              <i className="devicon-mongodb-plain colored grid-icon"></i>
+              <span className="hover-text">MongoDB</span>
+            </div>
+            <div className="grid-item">
+              <i class="devicon-firebase-plain colored grid-icon"></i>
+              <span className="hover-text">Firebase</span>
+            </div>
+          </div>
+        </section>
+        <section
+          className={`tools ${toolsIsVisible ? "show" : "hidden"}`}
+          ref={toolsRef}
+        >
+          <h1>Tools & Platforms</h1>
+          <div className="icon-grid">
+            <div className="grid-item">
+              <i className="devicon-eclipse-plain colored grid-icon"></i>
+              <span className="hover-text">Eclipse</span>
+            </div>
+            <div className="grid-item">
+              <i className="devicon-vscode-plain colored grid-icon"></i>
+              <span className="hover-text">Visual Studio Code</span>
+            </div>
+            <div className="grid-item">
+              <i class="devicon-docker-plain-wordmark colored grid-icon"></i>
+              <span className="hover-text">Dockerfile</span>
+            </div>
+            <div className="grid-item">
+              <i className="devicon-github-original colored grid-icon"></i>
+              <span className="hover-text">GitHub</span>
+            </div>
+            <div className="grid-item">
+              <i class="devicon-googlecloud-plain colored grid-icon"></i>
+              <span className="hover-text">Google Cloud</span>
+            </div>
+          </div>
+        </section>
+        <section
+          className={`projects ${projectsIsVisible ? "show" : "hidden"}`}
+          ref={projectsRef}
+        >
+          <h1>My Projects</h1>
+          <div className="projects-grid">
+            <div className="grid-item">
+              <div className="preview">
+                <img src={breezyPreview} alt="breezy-preview" />
+              </div>
+              <h2>Breezy</h2>
+              <p>
+                A full-stack weather web application built with React.js, TailwindCSS, Node.js, Express.js, containerized with Dockerfile and is deployed with Google Cloud Platform.
+              </p>
+              <div className="project-links">
+                <a
+                  href="https://github.com/Ezimy/Breezy"
+                  target="_blank"
+                >
+                  {" "}
+                  <FontAwesomeIcon icon={faGithub} className="link-icon" />{" "}
+                  GitHub
+                </a>
+                <a
+                  href="https://breezy-app.ca"
+                  target="_blank"
+                >
+                  {" "}
+                  <FontAwesomeIcon icon={faFile} className="link-icon" /> Demo
+                </a>
+              </div>
+            </div>
+            <div className="grid-item">
+              <div className="preview">
+                <img src={geminiPreview} alt="gemini-inventory-preview" />
+              </div>
+              <h2>Gemini Inventory</h2>
+              <p>
+                A full-stack CRUD web application for inventory management built with React.js, TailwindCSS, Node.js, and Express.js. It uses MongoDB for data storage, Firebase and MongoDB for authentication and role-based access, and is containerized with Docker and deployed on Google Cloud.
+              </p>
+              <div className="project-links">
+                <a
+                  href="https://github.com/Ezimy/GM-inventory-management-public"
+                  target="_blank"
+                >
+                  {" "}
+                  <FontAwesomeIcon icon={faGithub} className="link-icon" />{" "}
+                  GitHub
+                </a>
+              </div>
+            </div>
+            <div className="grid-item">
+              <div className="preview">
+                <img src={componentLibraryPreview} alt="components-library" />
+              </div>
+              <h2>Components Library++</h2>
+              <p>
+                A React project that is a preview of various components styled
+                differently according to different props passed to the component
+              </p>
+              <div className="project-links">
+                <a
+                  href="https://github.com/Ezimy/components-library"
+                  target="_blank"
+                >
+                  {" "}
+                  <FontAwesomeIcon icon={faGithub} className="link-icon" />{" "}
+                  GitHub
+                </a>
+                <a
+                  href="https://celadon-gelato-7fbb36.netlify.app/"
+                  target="_blank"
+                >
+                  {" "}
+                  <FontAwesomeIcon icon={faFile} className="link-icon" /> Demo
+                </a>
+              </div>
+            </div>
+            <div className="grid-item">
+              <div className="preview">
+                <img src={quizzicalPreview} alt="quizzical-preview" />
+              </div>
+              <h2>Quzzical</h2>
+              <p>
+                A React project that generates a quiz with questions generated
+                from a form
+              </p>
+              <div className="project-links">
+                <a
+                  href="https://github.com/Ezimy/quizzical_project"
+                  target="_blank"
+                >
+                  {" "}
+                  <FontAwesomeIcon icon={faGithub} className="link-icon" />{" "}
+                  GitHub
+                </a>
+                <a
+                  href="https://unique-kheer-67caf2.netlify.app/"
+                  target="_blank"
+                >
+                  {" "}
+                  <FontAwesomeIcon icon={faFile} className="link-icon" /> Demo
+                </a>
+              </div>
+            </div>
+            <div className="grid-item">
+              <div className="preview">
+                <img src={watchlistPreview} alt="watchlist-preview" />
+              </div>
+              <h2>Movie Watchlist</h2>
+              <p>
+                A Javascript project that lets you search for movies that are
+                fetched from omdbapi to add to a watchlist that has movies
+                stored in local storage
+              </p>
+              <div className="project-links">
+                <a
+                  href="https://github.com/Ezimy/movie_watchlist_project"
+                  target="_blank"
+                >
+                  {" "}
+                  <FontAwesomeIcon icon={faGithub} className="link-icon" />{" "}
+                  GitHub
+                </a>
+                <a
+                  href="https://splendorous-semolina-82b3ed.netlify.app/"
+                  target="_blank"
+                >
+                  {" "}
+                  <FontAwesomeIcon icon={faFile} className="link-icon" />
+                  Demo
+                </a>
+              </div>
+            </div>
+            <div className="grid-item">
+              <div className="preview">
+                <img
+                  src={colorGeneratorPreview}
+                  alt="color-generator-preview"
+                />
+              </div>
+              <h2>Color Scheme Generator</h2>
+              <p>
+                A Javascript project that fetchs from thecolorapi.com to
+                generate a color scheme
+              </p>
+              <div className="project-links">
+                <a
+                  href="https://github.com/Ezimy/color-scheme-generator"
+                  target="_blank"
+                >
+                  {" "}
+                  <FontAwesomeIcon icon={faGithub} className="link-icon" />{" "}
+                  GitHub
+                </a>
+                <a
+                  href="https://musical-sorbet-6c7be5.netlify.app/"
+                  target="_blank"
+                >
+                  {" "}
+                  <FontAwesomeIcon icon={faFile} className="link-icon" />
+                  Demo
+                </a>
+              </div>
+            </div>
+          </div>
+          <div className="more-projects">More Projects Coming Soon</div>
+        </section>
+      </main>
+    </>
+  );
+};
 export default About;

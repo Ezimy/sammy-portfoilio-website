@@ -60,7 +60,9 @@
         align-items: center;
         text-align: center;
         position: relative;
-        transition: transform 0.3s, box-shadow 0.3s;
+        transition:
+          transform 0.3s,
+          box-shadow 0.3s;
 
         svg {
           width: 100%;
@@ -70,7 +72,7 @@
 
         .hover-text {
           font-family: "Rubik";
-          font-size: 2rem;
+          font-size: 1.5rem;
           color: #44cfcb;
           opacity: 0;
           transition: opacity 0.3s;
@@ -78,7 +80,7 @@
         }
 
         &:hover {
-          svg {
+          .grid-icon {
             opacity: 0;
           }
 
@@ -120,7 +122,9 @@
         justify-content: center;
         align-items: center;
         text-align: center;
-        transition: transform 0.3s, box-shadow 0.3s;
+        transition:
+          transform 0.3s,
+          box-shadow 0.3s;
         .grid-icon {
           opacity: 1;
           transition: opacity 0.3s;
@@ -128,7 +132,7 @@
 
         .hover-text {
           font-family: "Rubik";
-          font-size: 2rem;
+          font-size: 1.5rem;
           color: #44cfcb;
           opacity: 0;
           transition: opacity 0.3s;
@@ -171,37 +175,48 @@
         border-radius: 0.5rem;
         display: flex;
         flex-direction: column;
-        opacity: 0.75;
-        background-color: #2a4494;
-        width: auto;
-        height: auto;
-        border: 1px solid #44cfcb;
-        padding: 1.5rem;
-        justify-content: center;
+        justify-content: space-between; // ensures links stay at the bottom
         align-items: center;
         text-align: center;
-        transition: transform 0.3s, box-shadow 0.3s;
+        opacity: 0.75;
+        background-color: #2a4494;
+        width: 100%;
+        height: 100%;
+        min-height: 700px; // force consistent height
+        border: 1px solid #44cfcb;
+        padding: 1.5rem;
+        transition:
+          transform 0.3s,
+          box-shadow 0.3s;
+
         h2 {
           color: #44cfcb;
           margin-top: 1rem;
           font-size: 1.5rem;
         }
+
         p {
           font-size: 1rem;
-          width: 500px;
+          max-width: 500px;
+          margin: 1rem 0;
+          flex-grow: 1; // allows it to fill vertical space
         }
+
         .preview {
-          width: fit-content;
+          width: 500px;
           height: 500px;
           img {
             width: 100%;
             height: 100%;
+            object-fit: cover;
           }
         }
+
         .project-links {
           margin-top: 1rem;
           display: flex;
           gap: 1rem;
+
           a {
             font-family: sans-serif;
             text-decoration: none;
@@ -212,16 +227,21 @@
             align-items: center;
             justify-content: center;
             font-size: 1rem;
-            transition: transform 0.3s, box-shadow 0.3s;
-          }
-          a:hover {
-            box-shadow: 0 4px 8px #44cfcb;
-          }
-          .link-icon {
-            margin-right: 0.25rem;
+            transition:
+              transform 0.3s,
+              box-shadow 0.3s;
+
+            &:hover {
+              box-shadow: 0 4px 8px #44cfcb;
+            }
+
+            .link-icon {
+              margin-right: 0.25rem;
+            }
           }
         }
       }
+
       .grid-item:hover {
         transform: scale(1.05);
         box-shadow: 0 4px 8px #44cfcb;
@@ -240,7 +260,9 @@
     width: fit-content;
     height: auto;
     padding: 1rem;
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition:
+      transform 0.3s,
+      box-shadow 0.3s;
   }
   .more-projects:hover {
     transform: scale(1.05);

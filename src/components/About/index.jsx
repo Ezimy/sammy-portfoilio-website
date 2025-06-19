@@ -239,7 +239,7 @@ const About = () => {
               </div>
               <h2>Components Library++</h2>
               <p>
-                A React project that is a preview of various components styled
+                A React.js web application that is a preview of various components styled
                 differently according to different props passed to the component
               </p>
               <div className="project-links">
@@ -266,7 +266,7 @@ const About = () => {
               </div>
               <h2>Quzzical</h2>
               <p>
-                A React project that generates a quiz with questions generated
+                A React.js web application that generates a quiz with questions generated
                 from a form
               </p>
               <div className="project-links">
@@ -293,7 +293,7 @@ const About = () => {
               </div>
               <h2>Movie Watchlist</h2>
               <p>
-                A Javascript project that lets you search for movies that are
+                A Javascript web application that lets you search for movies that are
                 fetched from omdbapi to add to a watchlist that has movies
                 stored in local storage
               </p>
@@ -325,8 +325,7 @@ const About = () => {
               </div>
               <h2>Color Scheme Generator</h2>
               <p>
-                A Javascript project that fetchs from thecolorapi.com to
-                generate a color scheme
+                A web application built with Javascript that uses thecolorapi.com to generate a color scheme
               </p>
               <div className="project-links">
                 <a

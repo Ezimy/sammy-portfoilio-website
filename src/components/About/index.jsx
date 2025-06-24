@@ -224,7 +224,7 @@ const About = () => {
               </p>
               <div className="project-links">
                 <a
-                  href="https://github.com/Ezimy/GM-inventory-management-public"
+                  href="https://github.com/Ezimy/GM-inventory-public"
                   target="_blank"
                 >
                   {" "}

@@ -5,7 +5,7 @@ import colorGeneratorPreview from "../../assets/images/color-generator-preview.P
 import quizzicalPreview from "../../assets/images/quizzical.PNG";
 import watchlistPreview from "../../assets/images/watchlist-preview.PNG";
 import breezyPreview from  "../../assets/images/breezy-preview.png";
-import geminiPreview from "../../assets/images/gemini-inventory-preview.png"
+import geminiPreview from "../../assets/images/gemini-preview.png"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faFile } from "@fortawesome/free-solid-svg-icons";
@@ -216,7 +216,7 @@ const About = () => {
             </div>
             <div className="grid-item">
               <div className="preview">
-                <img src={geminiPreview} alt="gemini-inventory-preview" />
+                <img src={geminiPreview} alt="gemini-preview" />
               </div>
               <h2>Gemini Inventory</h2>
               <p>
